@@ -1,0 +1,13 @@
+.cards {
+  background-color: #e2daeb;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cards p {
+  color: #1b1325;
+}
+
+.question {
+  font-weight: 600;
+}
