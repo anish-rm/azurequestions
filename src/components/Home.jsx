@@ -12,8 +12,12 @@ export default function Home() {
   const [cardIndex, setCardIndex] = useState(-1);
 
   function handleShowAnswer(index) {
-    setAnswer(!answer);
-    setCardIndex(index);
+    if (index !== cardIndex) {
+      setAnswer(true);
+      setCardIndex(index);
+    } else {
+      setAnswer(!answer);
+    }
   }
   const questions = [
     {
@@ -659,7 +663,7 @@ export default function Home() {
     },
     {
       question:
-        "Which two features or services can be integrated with Azure Monitor? Each correct answer presents part of the solution.",
+        "Which two features or services can be integrated with Azure Monitor? Each correct Answer presents part of the solution.",
       options: [
         "Azure status",
         "Application Insights",
@@ -688,7 +692,7 @@ export default function Home() {
     },
     {
       question:
-        "Instructions: To answer drag the appropriate Term from the column on the left to its description on the right. Each benefit may be used once, more than once, or not at all.  1. The ability to use the same credentials to access multiple resources & applications from different providers __________ 2.The process of identifying the access level of a user or service ___________ 3.Requires several elements to identify a used or a service ______________",
+        "Instructions: To Answer drag the appropriate Term from the column on the left to its description on the right. Each benefit may be used once, more than once, or not at all.  1. The ability to use the same credentials to access multiple resources & applications from different providers __________ 2.The process of identifying the access level of a user or service ___________ 3.Requires several elements to identify a used or a service ______________",
       options: [
         "Authorization",
         "Multi-factor authentication (MFA)",
@@ -822,7 +826,7 @@ export default function Home() {
 
     {
       question:
-        "Azure Cost Management Tool can help you answer which questions?",
+        "Azure Cost Management Tool can help you Answer which questions?",
       options: [
         "How much would I save by migrating to the cloud?",
         "What will my Azure resource cost once I deploy it?",
@@ -833,7 +837,7 @@ export default function Home() {
     },
     {
       question:
-        "Match the cloud service models to the appropriate solutions. To answer, drag the appropriate model from the column on the left to its offering on the right. Each model may be used once, more than once, or not at all. 1.A Cloud-based file server -  2.A Cloud-based Accounting System - 3.A Cloud-based service for custom Apps - ",
+        "Match the cloud service models to the appropriate solutions. To Answer, drag the appropriate model from the column on the left to its offering on the right. Each model may be used once, more than once, or not at all. 1.A Cloud-based file server -  2.A Cloud-based Accounting System - 3.A Cloud-based service for custom Apps - ",
       options: [
         "Infrastructure as a service (IaaS)",
         "Platform as a service (PaaS)",
@@ -993,7 +997,7 @@ export default function Home() {
         "Zone-redundant storage",
         "Locally redundant storage",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
@@ -1005,7 +1009,7 @@ export default function Home() {
         "Configure DirectAccess on a Windows Server 2019 server VM.",
         "Configure a Multi-Site VPN",
       ],
-      answer: "3",
+      Answer: "3",
     },
     {
       question:
@@ -1016,19 +1020,19 @@ export default function Home() {
         "a management group",
         "a reservation",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
         "In which type of cloud model are all the hardware resources owned by a third-party and shared between multiple tenants?",
       options: ["Private", "Hybrid", "Public", "Community"],
-      answer: "3",
+      Answer: "3",
     },
     {
       question:
-        "Select the appropriate answer choice which completes the sentence correctly:\nA Cloud service that supports a maximum of 20 instances is more _________ than a service that supports a maximum of 5 instances.",
+        "Select the appropriate Answer choice which completes the sentence correctly:\nA Cloud service that supports a maximum of 20 instances is more _________ than a service that supports a maximum of 5 instances.",
       options: ["Distributed", "Scalable", "Secure"],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
@@ -1039,7 +1043,7 @@ export default function Home() {
         "geo-redundancy",
         "isolation and segmentation",
       ],
-      answer: "4",
+      Answer: "4",
     },
     {
       question:
@@ -1050,7 +1054,7 @@ export default function Home() {
         "Policies are merged into all child resources",
         "Policies apply only to parent resources",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
@@ -1061,7 +1065,7 @@ export default function Home() {
         "Create a private connection with Azure ExpressRoute",
         "Create a private endpoint.",
       ],
-      answer: "4",
+      Answer: "4",
     },
     {
       question:
@@ -1072,7 +1076,7 @@ export default function Home() {
         "Locally redundant Storage",
         "Geo redundant Storage",
       ],
-      answer: "4",
+      Answer: "4",
     },
     {
       question:
@@ -1083,42 +1087,42 @@ export default function Home() {
         "a VPN for FinServer and a virtual network gateway for each other server.",
         "one resource group for all the servers and a resource lock for FinServer.",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
         "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails. Solution: You deploy the virtual machines to a scale set. Does the solution meet the goal?",
       options: ["Yes", "No"],
-      answer: "1",
+      Answer: "1",
     },
     {
       question:
-        "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails. What are two possible solutions? Each correct answer presents a complete solution.",
+        "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails. What are two possible solutions? Each correct Answer presents a complete solution.",
       options: [
         "Deploy the virtual machines to two or more availability zones",
         "Deploy the virtual machines to two or more resource groups",
         "Deploy the virtual machines to a scale set",
         "Deploy the virtual machines to two or more regions",
       ],
-      answer: "1, 4",
+      Answer: "1, 4",
     },
     {
       question:
-        "Select the answer that correctly completes the sentence. When you transfer data to an Azure resource, its known as",
+        "Select the Answer that correctly completes the sentence. When you transfer data to an Azure resource, its known as",
       options: ["external", "internal", "ingress", "egress"],
-      answer: "3",
+      Answer: "3",
     },
     {
       question:
-        "Select the answer that correctly completes the sentence. When you transfer data from an Azure resource, its known as",
+        "Select the Answer that correctly completes the sentence. When you transfer data from an Azure resource, its known as",
       options: ["external", "internal", "ingress", "egress"],
-      answer: "4",
+      Answer: "4",
     },
     {
       question:
         "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails. Solution: You deploy the virtual machines to a scale set. Does the solution meet the goal?",
       options: ["Yes", "No"],
-      answer: "1",
+      Answer: "1",
     },
     {
       question:
@@ -1130,7 +1134,7 @@ export default function Home() {
         "a virtual network",
         "a gateway subnet",
       ],
-      answer: "1, 4",
+      Answer: "1, 4",
     },
     {
       question:
@@ -1141,7 +1145,7 @@ export default function Home() {
         "On-premises Infrastructure",
         "Software as a Service (SaaS)",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
@@ -1152,36 +1156,36 @@ export default function Home() {
         "Create a policy that states that all confidential items can not be viewed or modified",
         "Use labels to verify user access to emails",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
         "Additional costs are incurred by creating additional resource groups in an Azure Subscription.",
       options: ["Yes", "No"],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
         "Additional data transfer costs are incurred by copying data from Azure to on-premises network over a VPN.",
       options: ["Yes", "No"],
-      answer: "1",
+      Answer: "1",
     },
     {
       question:
         "The Azure spending limit is fixed and cannot be increased or decreased.",
       options: ["Yes", "No"],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
-        "This question requires that you evaluate the underlined text to determine if it is correct. Azure Scale Set enables you to scale to thousands of virtual machines for high-performance computing and large-scale parallel jobs. Instructions: Review the underlined text. If it makes the statement correct, Select 'No change is needed'. If the statement is incorrect, select the answer choice that makes the statement correct?",
+        "This question requires that you evaluate the underlined text to determine if it is correct. Azure Scale Set enables you to scale to thousands of virtual machines for high-performance computing and large-scale parallel jobs. Instructions: Review the underlined text. If it makes the statement correct, Select 'No change is needed'. If the statement is incorrect, select the Answer choice that makes the statement correct?",
       options: [
         "No change is needed",
         "Automatic Scaling",
         "Azure Batch",
         "An availability zone",
       ],
-      answer: "3",
+      Answer: "3",
     },
     {
       question: "What is required to use Azure Cost Management?",
@@ -1191,17 +1195,17 @@ export default function Home() {
         "Azure Plan",
         "Microsoft Customer agreement",
       ],
-      answer: "4",
+      Answer: "4",
     },
     {
       question:
-        "How should you calculate the monthly uptime percentage? To answer, select the appropriate options in the answer area",
+        "How should you calculate the monthly uptime percentage? To Answer, select the appropriate options in the Answer area",
       options: [
         "Downtime in Minutes x 100",
         "Maximum Available Minutes x 100",
         "(Maximum Available Minutes - Downtime in Minutes) / Maximum Available Minutes x 100",
       ],
-      answer: "3",
+      Answer: "3",
     },
     {
       question:
@@ -1213,7 +1217,7 @@ export default function Home() {
         "Azure DNS",
         "Azure Traffic Manager",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question: "What is required to use Azure Cost Management?",
@@ -1223,7 +1227,7 @@ export default function Home() {
         "Azure Plan",
         "Microsoft Customer agreement",
       ],
-      answer: "4",
+      Answer: "4",
     },
     {
       question:
@@ -1235,13 +1239,13 @@ export default function Home() {
         "Azure DNS",
         "Azure Traffic Manager",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
         "Your company is planning to migrate all their virtual machines to an Azure pay-as-you-go subscription. The Virtual machines are currently hosted on the Hyper-V hosts in a data center. You are tasked to ensure that the intended Azure Solution uses the correct expenditure model. Solution: You recommend the use of Operational Expenditure model. Does this solution meet the goal?",
       options: ["Yes", "No"],
-      answer: "1",
+      Answer: "1",
     },
     {
       question:
@@ -1253,7 +1257,7 @@ export default function Home() {
         "Gremlin API",
         "Table API",
       ],
-      answer: "3, 5",
+      Answer: "3, 5",
     },
     {
       question:
@@ -1264,7 +1268,7 @@ export default function Home() {
         "Deployed to a separate resource group",
         "Deployed to a separate virtual network",
       ],
-      answer: "4",
+      Answer: "4",
     },
     {
       question:
@@ -1279,18 +1283,18 @@ export default function Home() {
         "Azure Cloud Shell",
         "Azure Resource Groups",
       ],
-      answer: "1, 2, 5, 6",
+      Answer: "1, 2, 5, 6",
     },
     {
       question:
-        "This question requires that you evaluate the underlined text to determine if it is correct. Your company implements Azure Sentinel to automatically add a watermark to Microsoft Word documents that contain credit card information. Instructions: Review the underlined text. If it makes the statement correct, Select 'No change is needed'. If the statement is incorrect, select the answer choice that makes the statement correct?",
+        "This question requires that you evaluate the underlined text to determine if it is correct. Your company implements Azure Sentinel to automatically add a watermark to Microsoft Word documents that contain credit card information. Instructions: Review the underlined text. If it makes the statement correct, Select 'No change is needed'. If the statement is incorrect, select the Answer choice that makes the statement correct?",
       options: [
         "No change is needed",
         "Azure Information Protection",
         "DDoS protection",
         "Azure Active Directory (AAD) Identity Protection",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
@@ -1300,7 +1304,7 @@ export default function Home() {
         "Point-to-Site (P2S) VPN",
         "Site-to-Site (S2S) VPN",
       ],
-      answer: "3",
+      Answer: "3",
     },
     {
       question:
@@ -1311,19 +1315,19 @@ export default function Home() {
         "Azure Arc",
         "Azure Pipelines Agent",
       ],
-      answer: "3",
+      Answer: "3",
     },
     {
       question:
         "DNS Server running on a Virtual Machine is an example of PaaS?",
       options: ["Yes", "No"],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
         "SQL Server installed on a Virtual Machine is an example of Platform as a Service?",
       options: ["Yes", "No"],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
@@ -1334,7 +1338,7 @@ export default function Home() {
         "to the same Azure region",
         "by using the same Azure resource manager Template",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
@@ -1345,13 +1349,13 @@ export default function Home() {
         "Azure Logic App",
         "Azure App Service",
       ],
-      answer: "1",
+      Answer: "1",
     },
     {
       question:
         "You are working on understanding all the key terms when it comes to international standards, data privacy and data protection policies. Which of the following choices pertains to the following definition? 'An Organization that defines international standards across all industries.'",
       options: ["Azure Government", "ISO", "GDPR", "NIST"],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
@@ -1362,25 +1366,930 @@ export default function Home() {
         "Packet Inspection",
         "Resource Cost analysis",
       ],
-      answer: "2",
+      Answer: "2",
     },
     {
       question:
         "Monthly Salaries of technical personnel of an organization are an example of operational expenditure (OpEx) costs?",
       options: ["Yes", "No"],
-      answer: "1",
+      Answer: "1",
     },
     {
       question:
         "Azure Monitor can monitor the performance of on-premises computers and related infrastructure components yourself.",
       options: ["Yes", "No"],
-      answer: "1",
+      Answer: "1",
     },
     {
       question:
         "Azure Key Vault automatically generates a new secret after every use?",
       options: ["Yes", "No"],
-      answer: "2",
+      Answer: "2",
+    },
+    {
+      question: "Deploying your own datacenter is an example of CapEx.",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "Which of the following should you use to evaluate whether your company's Azure environment meets regulatory requirements?",
+      options: [
+        "Azure Service Health",
+        "Microsoft Defender for Cloud",
+        "Azure Knowledge Center",
+        "Azure Advisor",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "What is guaranteed in an Azure Service Level Agreement (SLA) for virtual machines?",
+      options: ["Feature availability", "Bandwidth", "Uptime", "Performance"],
+      Answer: "3",
+    },
+    {
+      question:
+        "You plan to map a network drive from several computers that run Windows 10 to Azure Storage. You need to create a storage solution in Azure for the planned mapped drive. What should you create?",
+      options: [
+        "A virtual machine data disk",
+        "A File service in a storage account",
+        "A Blob service in a storage account",
+        "An Azure SQL database",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "Your company has several business units. Each business unit requires 20 different Azure resources for daily operation. All the business units require the same type of Azure resources. You need to recommend a solution to automate the creation of the Azure resources. What should you include in the recommendations?",
+      options: [
+        "Virtual machine scale sets",
+        "Azure API Management service",
+        "Management groups",
+        "Azure Resource Manager templates",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "Which node in the Azure portal should you use to assign a user the Reader role for a resource group?",
+      options: [
+        "User access management",
+        "Policy Hub",
+        "Access Control (IAM)",
+        "User role management",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "To deploy an application to a number of Azure virtual machines, you should create a universal group. Instructions: Review the underlined text. If it makes the statement correct, select 'No Change is needed'. If the statement is incorrect, select the Answer choice that makes the statement correct.",
+      options: ["No Change is needed", "Resource", "Deployment", "Security"],
+      Answer: "3",
+    },
+    {
+      question:
+        "Your company has a Software Assurance agreement that includes Microsoft SQL Server licenses. You plan to deploy SQL Server on Azure virtual machines. What should you do to minimize licensing costs for the deployment?",
+      options: [
+        "Configure Azure Cost Management budgets.",
+        "Deallocate the virtual machines during off hours.",
+        "Use Azure reservations.",
+        "Use Azure Hybrid Benefit.",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "If Windows Server or Microsoft SQL Server licenses are covered by __________, you can repurpose the licenses on Azure Virtual machines.",
+      options: [
+        "An End user license agreement (EULA)",
+        "Microsoft Lifecycle Policy",
+        "Software Assurance",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "A Premier support plan can only be purchased by companies that have an Enterprise Agreement (EA).",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "You can manage an on-premises Windows Server as an Azure resource by using which of the following?",
+      options: [
+        "Azure Arc",
+        "Azure AD connect",
+        "Azure VPN gateway",
+        "Azure Pipelines agent",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "Which of the following uses inbound and outbound rules to filter network traffic to and from Azure resources connected to Azure Virtual Networks?",
+      options: [
+        "Internal Load Balancer",
+        "Application Security Group",
+        "Network Security Group",
+        "Public Load Balancer",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "Trust Center provides information about the Azure Compliance offering.",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "You can improve composite SLA by adding redundant service to your application.",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "All Azure services in private preview must be accessed by using a separate Azure Portal.",
+      options: ["Yes", "No"],
+      Answer: "2",
+    },
+    {
+      question:
+        "Which of the following is Microsoft's managed network security service in Azure that protects Azure Virtual Network resources?",
+      options: [
+        "Azure Bastion",
+        "Application Security Group",
+        "Azure Sentinel",
+        "Azure Firewall",
+      ],
+      Answer: "4",
+    },
+    {
+      question: "__________ is an Apache spark-based analytics service.",
+      options: [
+        "Azure Data Factory",
+        "Azure DevOps",
+        "Azure Databricks",
+        "Azure Synapse Analytics",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "Which Azure service provides a set of version control tools to manage code?",
+      options: [
+        "Azure Repos",
+        "Azure Cosmos DB",
+        "Azure Storage",
+        "Azure DevTest Labs",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "You have a virtual machine named VM1 that runs Windows Server 2019. VM1 is in the Australia East Azure region. Which Azure service should you use from the Azure portal to view service failure notifications that can affect the availability of VM1?",
+      options: [
+        "Azure virtual machines",
+        "Azure Service Fabric",
+        "Azure Monitor",
+        "Azure Advisor",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "Which Azure Storage access tier has the highest storage costs, but the lowest access costs?",
+      options: ["Hot tier", "Cool tier", "Cold tier", "Archive tier"],
+      Answer: "1",
+    },
+    {
+      question:
+        "___________ provides in-depth information about security, privacy, compliance offerings, policies, and features across Microsoft Cloud Products.",
+      options: [
+        "Microsoft Trust Center",
+        "Microsoft Purview",
+        "Compliance portal",
+        "Microsoft 365 Defender portal",
+        "Microsoft Defender",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "Premium block blob storage accounts only support which of the following redundancy?",
+      options: [
+        "Geo Zone redundant Storage (GZRS)",
+        "Geo redundant Storage (GRS)",
+        "Locally redundant Storage (LRS)",
+        "Zone redundant Storage (ZRS)",
+      ],
+      Answer: "4",
+    },
+    {
+      question: "Which of the following can be used to enable Just in time?",
+      options: [
+        "Azure Firewall",
+        "Azure Bastion",
+        "Microsoft Defender for Cloud",
+        "Azure Front Door",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "What is the minimum recommended data retention period for archive access tiers of Azure Storage?",
+      options: ["30", "60", "90", "180"],
+      Answer: "4",
+    },
+    {
+      question:
+        "What is the minimum recommended data retention period for cool access tiers of Azure Storage?",
+      options: ["30", "60", "90", "180"],
+      Answer: "1",
+    },
+    {
+      question:
+        "Which service provides network traffic filtering across multiple Azure subscriptions and virtual networks?",
+      options: [
+        "An application security group",
+        "A network security group (NSG)",
+        "Azure Key Vault",
+        "Azure Firewall",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "You plan to extend your company's network to Azure. The network contains a VPN appliance that uses an IP address of 131.107.200.1. You need to create an Azure resource that identifies the VPN appliance. Which Azure resource should you create?",
+      options: [
+        "Local Network Gateway",
+        "Application network gateway",
+        "Virtual network gateways",
+        "Load balancers",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "You are developing a web application that will be hosted on Virtual Machines. You start deploying Azure Virtual Machines for hosting the application. Where in the Azure portal will you be notified when the deployment of Virtual Machines is complete?",
+      options: [
+        "Navigate section",
+        "Activity Log section",
+        "Notifications section",
+        "View Account section",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "Azure SQL database allows users to perform patch management of database software?",
+      options: ["Yes", "No"],
+      Answer: "2",
+    },
+    {
+      question:
+        "Azure DevOps Services allows developers to deploy or update applications to Azure using continuous Integration/Continuous Delivery (CI/CD) pipelines?",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "An organization that hosts its infrastructure in which of the following environments no longer requires a data center?",
+      options: [
+        "in a Private Cloud",
+        "in a Hybrid Cloud",
+        "in a Public Cloud",
+        "on a Hyper-V host",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "Requiring a user to enter a password and Answer a security question when signing in to Azure Active Directory is an example of?",
+      options: [
+        "Managed identities",
+        "Multi-factor authentication (MFA)",
+        "Business-to-Customer (B2C)",
+        "Identity Services",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "Which of the following can be used to view which user turned off a specific Virtual Machine during the last 14 days?",
+      options: [
+        "Azure Event Hubs",
+        "Azure Activity Log",
+        "Azure Access Control IAM",
+        "Azure Service Health",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "What is used to grant permission to Azure Virtual Desktop resources?",
+      options: [
+        "Resource groups",
+        "Application security groups",
+        "Tags",
+        "Role-based access control (RBAC) roles",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "Which of the following can calculate cost savings due to reduced electricity consumption as a result of migrating on-premises Microsoft SQL servers to Azure?",
+      options: [
+        "Azure Total Cost of Ownership (TCO) reduced calculator",
+        "Azure Migrate: Server Assessment tool",
+        "Azure Pricing Calculator",
+        "Database Migration Assistant",
+      ],
+      Answer: "1",
+    },
+    {
+      question: "Azure Resource Manager (ARM) Templates use the?",
+      options: ["CSV format", "JSON format", "HTML format", "XML format"],
+      Answer: "2",
+    },
+    {
+      question:
+        "If an Azure Virtual Machine has a status of Stopped (deallocated), then you will continue to pay for which of the following?",
+      options: ["Storage", "Compute Capacity", "Networking", "I/O operations"],
+      Answer: "1",
+    },
+    {
+      question:
+        "What do you need to create before you can create a new file share from the Azure portal?",
+      options: [
+        "Azure Data Box",
+        "Resource Group",
+        "Azure Migrate",
+        "Storage Account",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "You have an Azure web app. You need to manage the settings of the web app from an iPhone. What are two Azure management tools that you can use?",
+      options: [
+        "Azure portal",
+        "Windows PowerShell",
+        "Azure Storage Explorer",
+        "Azure Cloud Shell",
+        "Azure CLI",
+      ],
+      Answer: "1,4",
+    },
+    {
+      question:
+        "You need to configure an Azure solution that meets the following requirements: 1. Secure websites from attacks 2. Generates reports that contain details of attempted attacks. What should you include in the solution?",
+      options: [
+        "DDoS protection",
+        "Azure Firewall",
+        "Network Security Group",
+        "Azure Information Protection",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "To Answer, drag the appropriate model from the column on the left to its offering on the right. Each model may be used once, more than once, or not at all. Models 1. Azure App Service - 2. Azure Virtual Machines - 3. Microsoft Dynamics 365.",
+      options: [
+        "Infrastructure as a Service (IaaS)",
+        "Platform as a Service (PaaS)",
+        "Software as a Service (SaaS)",
+      ],
+      Answer: "2,1,3",
+    },
+    {
+      question:
+        "You can use Azure Active Directory to set permissions by dividing users into groups?",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question: "Azure Logic Apps is a serverless solution for running code?",
+      options: ["Yes", "No"],
+      Answer: "2",
+    },
+    {
+      question:
+        "You need to manage containers. Which of the two Azure services can you use?",
+      options: [
+        "Azure Container Instances",
+        "Azure Virtual Machines",
+        "Azure Kubernetes Service (AKS)",
+        "Azure Virtual Desktop",
+        "Azure Functions",
+      ],
+      Answer: "1,3",
+    },
+    {
+      question:
+        "After you create a virtual machine, you need to modify the ___________ to allow connections to TCP port 8080 on the Virtual Machine.",
+      options: [
+        "Network Security Group (NSG)",
+        "Route Table",
+        "Virtual Network Gateway",
+        "Virtual Network",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "You need to purchase a third-party virtual security appliance that you will deploy to an Azure subscription. What should you use?",
+      options: [
+        "Microsoft Defender for Cloud",
+        "Azure Subscriptions",
+        "Microsoft Store",
+        "Azure Marketplace",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "An Azure service is no longer updated with new features after it becomes generally available?",
+      options: ["Yes", "No"],
+      Answer: "2",
+    },
+    {
+      question:
+        "When you create Azure resources for a service in public preview, you must recreate the resources once the service becomes generally available?",
+      options: ["Yes", "No"],
+      Answer: "2",
+    },
+    {
+      question:
+        "_____________ Provides access to Azure compute capacity at deep discounts.",
+      options: [
+        "Azure Reserved Virtual Machine instances",
+        "Azure Container Instances",
+        "Azure Virtual Machine Scale Sets",
+        "Azure Spot Virtual Machine Instances",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "Your company has multiple offices. You plan to generate several billing reports from the Azure portal. Each report will contain the Azure resource utilization of each office. Which Azure Resource Manager feature should you use before you generate the reports?",
+      options: ["Policies", "Tags", "Locks", "Templates"],
+      Answer: "2",
+    },
+    {
+      question: "At which OSI layer does Express Route operate?",
+      options: ["Layer 2", "Layer 3", "Layer 5", "Layer 7"],
+      Answer: "2",
+    },
+    {
+      question:
+        "A company is planning to deploy resources to Azure. They want to have the ability to manage user access to resources across multiple subscriptions. Which of the following can help you achieve this requirement?",
+      options: [
+        "Azure Policies",
+        "Resource Groups",
+        "Azure App Service",
+        "Management Groups",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "Which of the following does a customer provide in a Software as a Service (SaaS) model?",
+      options: [
+        "Application data",
+        "Compute resources",
+        "Application software",
+        "Data storage",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "Your Azure trial account expired last week. You are now unable to __________.",
+      options: [
+        "Access the Azure Portal",
+        "Create additional Azure Active Directory user accounts",
+        "Access your data stored in Azure",
+        "Start an existing Azure Virtual Machine",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "You have an Azure environment that contains 10 virtual networks and 100 virtual machines. You need to limit the amount of inbound traffic to all the Azure virtual networks. What should you create?",
+      options: [
+        "10 Virtual Network Gateways",
+        "One Network Security Group (NSG)",
+        "10 Azure Express Route Circuits",
+        "One Azure Firewall",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "You have an accounting application named App1 that uses a legacy database. You plan to move App1 to the cloud. Which service model should you use?",
+      options: [
+        "Software as a Service (SaaS)",
+        "Infrastructure as a Service (IaaS)",
+        "Platform as a Service (PaaS)",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "You need to collect and automatically analyze security events from Azure Active Directory (Azure AD). What should you use?",
+      options: [
+        "Azure Synapse Analytics",
+        "Azure AD Connect",
+        "Azure Key Vault",
+        "Microsoft Sentinel",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "Azure Distributed Denial of Service (DDoS) Protection is an example of a protection mechanism implemented at the __________",
+      options: [
+        "Application Layer",
+        "Compute Layer",
+        "Network Layer",
+        "Perimeter Layer",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "A support engineer plans to perform several Azure management tasks by using the Azure CLI. You install the CLI on a computer. You need to tell the support engineer which tools to use to run the CLI. Which two tools should you instruct the support engineer to use?",
+      options: [
+        "Command Prompt",
+        "Windows Defender Firewall",
+        "Windows PowerShell",
+        "Azure Resource Explorer",
+        "Network and Sharing Center",
+      ],
+      Answer: "1,3",
+    },
+    {
+      question:
+        "Which of the following Azure Service should you use to store certificates?",
+      options: [
+        "Azure Key Vault",
+        "Azure Information Protection",
+        "Azure Storage account",
+        "Azure Security Center",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "A company is planning on using their Microsoft Azure Free Account for hosting production-based resources. Does the Azure Free Account allow you to host production-based resources?",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "A company wants to migrate some scripts to Microsoft Azure. They want to make use of the serverless features available in Azure. They decide to make use of Azure Functions. Would this meet the requirement?",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "Which of the following are considered vertical scaling in a cloud environment?",
+      options: [
+        "Provision additional containers",
+        "Increase the CPU and RAM of a virtual machine",
+        "Increase the number of virtual machines",
+        "Provision an additional Azure dedicated host",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "A company wants to host a set of tables in Microsoft Azure. They want absolutely zero administration of the underlying infrastructure and low latency access to data. You recommend using the Azure Cosmos DB. Would this meet the requirement?",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "A company is planning on setting up a solution in Microsoft Azure and one of the key requirement is 'A tool that provides guidance and recommendations to improve an Azure environment'. Which of the following would be best suited for this requirement?",
+      options: [
+        "Azure Cognitive Services",
+        "Azure DevOps",
+        "Azure Application Insights",
+        "Azure Advisor",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "Your development team needs to maintain multiple versions of files in Azure Blob Storage for auditing purposes. Which Azure feature can help you achieve file versioning?",
+      options: [
+        "Azure Blob versioning",
+        "Azure Blob snapshots",
+        "Azure Blob lifecycle management",
+        "Azure Blob soft delete",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "You need to identify the type of failure for which an Azure Availability Zone can be used to protect access to Azure services. What should you identify?",
+      options: [
+        "An Azure region failure",
+        "Physical server failure",
+        "A storage failure",
+        "An Azure data center failure",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "To reduce costs, your organization wants to automatically shut down VMs during non-business hours and start them up again in the morning. What Azure service should you configure for this purpose?",
+      options: [
+        "Azure Policy",
+        "Azure Logic Apps",
+        "Azure Monitor",
+        "Azure Automation",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "Your organization requires detailed auditing of who accesses and modifies data in Azure Blob Storage. Which Azure feature or service provides access logs and audit trails?",
+      options: [
+        "Azure Security Center",
+        "Azure Monitor",
+        "Azure Blob storage analytics",
+        "Azure Sentinel",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "Your company plans to migrate to Azure and the company has several departments. All the Azure resources used by each department will be managed by a department administrator. What are two possible techniques to segment Azure resources for the departments?",
+      options: [
+        "Multiple Azure Active Directory (Azure AD) directories",
+        "Multiple subscriptions",
+        "Multiple resource groups",
+        "Multiple regions",
+      ],
+      Answer: "2,3",
+    },
+    {
+      question: "To Answer, select the appropriate options",
+      options: [
+        "View Security recommendations - Advisor",
+        "Monitor the health of Azure Services - Monitor",
+      ],
+      Answer: "1 - 4, 2 - 1",
+    },
+    {
+      question:
+        "Azure DevOps Services includes a Git repository for developers to store code.",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "If you implement the security recommendations provided by Azure Advisor, your company's secure score will increase.",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "An Azure Reservation is used to reserve server capacity at a specific data center.",
+      options: ["Yes", "No"],
+      Answer: "2",
+    },
+    {
+      question:
+        "Who should take the lead in developing and implementing a disaster recovery plan for applications running on Azure Virtual Machines?",
+      options: [
+        "Microsoft Azure",
+        "The customer",
+        "A third-party provider",
+        "Azure Site Recovery service",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "Your company stores sensitive customer data in Azure. Which Azure service helps you automatically classify and label data based on its sensitivity to enforce data protection policies?",
+      options: [
+        "Azure Purview",
+        "Azure Monitor",
+        "Azure Policy",
+        "Azure Key Vault",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "A company needs to create around 50 customized Virtual Machines. Out of these, 20 are Windows-based virtual machines and 30 are Ubuntu machines. Which of the following would help reduce the administrative effort required to deploy the machines?",
+      options: [
+        "Azure Web Apps",
+        "Azure Load Balancer",
+        "Azure Virtual Machine Scale Sets",
+        "Azure Traffic Manager",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "Which of the following can be used to help you enforce resource tagging so you can manage billing? (Choose two)",
+      options: [
+        "Compliance Manager",
+        "Azure Service Health",
+        "Azure Policy",
+        "Azure Security Center",
+        "Azure Management Groups",
+      ],
+      Answer: "3,5",
+    },
+    {
+      question:
+        "A company wants to have an Enterprise messaging solution integrated with their existing application hosted within Microsoft Azure. Which of the following should the company use for this requirement?",
+      options: [
+        "API Management Services",
+        "Logic Apps",
+        "API Connections",
+        "Service Bus",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "In the shared responsibility model, who is typically responsible for conducting compliance audits to ensure that Azure services meet regulatory requirements?",
+      options: [
+        "Microsoft Azure",
+        "The customer",
+        "A third-party provider",
+        "Regulatory authorities",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "Your company hosts an accounting application named App1 that is used by all the customers of the company. App1 has low usage during the first two weeks and very high usage during the last two weeks of each month. Which benefit of Azure Cloud supports cost management for this type of usage pattern?",
+      options: [
+        "High latency",
+        "Elasticity",
+        "High availability",
+        "Load balancing",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "An organization that hosts its infrastructure ___________ no longer needs to maintain a data center.",
+      options: [
+        "in a Private Cloud",
+        "in a Public Cloud",
+        "in a Hybrid Cloud",
+        "on a Hyper-V host",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "You plan to provision Infrastructure as a Service (IaaS) resources in Azure. Which of the following resources is an example of IaaS?",
+      options: [
+        "An Azure virtual machine",
+        "An Azure logic app",
+        "An Azure web app",
+        "An Azure SQL database",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "You have an on-premises network that contains 100 servers and you need to recommend a solution that provides additional resources to your users. The solution must minimize capital and operational expenditure costs. What should you include in the recommendation?",
+      options: [
+        "A Private cloud",
+        "An additional data center",
+        "A complete migration to Public cloud",
+        "A Hybrid cloud",
+      ],
+      Answer: "4",
+    },
+    {
+      question:
+        "You are planning to deploy numerous web and database servers to Azure. You need to create a strategy that allows for connection types between the web and database servers to be controlled. You include use of Network Security Groups in your strategy. Does the solution meet the goal?",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "You can use 'Service Trust Portal' to download published audit reports and how Microsoft builds and operates its cloud services?",
+      options: ["Yes", "No"],
+      Answer: "1",
+    },
+    {
+      question:
+        "You plan to migrate a web application to Azure and the web application is accessed by external users. You need to recommend a cloud deployment solution to minimize the amount of administrative effort used to manage the application. What should you include in the recommendation?",
+      options: [
+        "Software as a Service (SaaS)",
+        "Infrastructure as a Service (IaaS)",
+        "Platform as a Service (PaaS)",
+        "Database as a Service (DaaS)",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "You have a resource group named RG1. You plan to create virtual networks and app services in RG1. You need to prevent the creation of virtual machines only in RG1. The solution must ensure that other objects can be created in RG1. What should you use?",
+      options: ["An Azure policy", "A lock", "An Azure role", "A tag"],
+      Answer: "1",
+    },
+    {
+      question:
+        "You have an Azure virtual network named VNET1 in a resource group named RG1. You assign an Azure policy specifying that virtual networks are not an allowed resource type in RG1. VNET1 is deleted automatically. What should you do?",
+      options: [
+        "No Change is needed",
+        "VNET1 becomes a read-only object.",
+        "VNET1 is moved automatically to another resource group.",
+        "VNET1 continues to function normally.",
+      ],
+      Answer: "4",
+    },
+    {
+      question: "What does the term 'Azure policy initiative' refer to?",
+      options: [
+        "A collection of Azure policy definition assignments",
+        "A group of role-based access controls (RBAC)",
+        "A collection of policy definitions",
+        "A group of Azure Blueprints definitions",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "One of the benefits of Azure Synapse Analytics is that high availability is built into the platform.",
+      options: [
+        "No Change is needed",
+        "Versioning",
+        "Automatic Scaling",
+        "Data compression",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "A company is planning on setting up a solution in Microsoft Azure. The solution would have the following key requirement: Provides a platform for creating workflows. Which of the following would be best suited for this requirement?",
+      options: [
+        "Azure App Service",
+        "Azure Application Insights",
+        "Azure Logic Apps",
+        "Azure Databricks",
+      ],
+      Answer: "3",
+    },
+    {
+      question:
+        "You plan to create an Azure Virtual machine and you need to identify which storage service must be used to store the unmanaged data disks of the Virtual machine. Which of the following would you identify?",
+      options: ["Queues", "File shares", "Tables", "Containers"],
+      Answer: "4",
+    },
+    {
+      question:
+        "Which of the following is a repeatable set of governance tools that helps development teams quickly build and create new environments while adhering to organizational compliance to speed up development and deployment?",
+      options: [
+        "CI/CD Pipeline",
+        "Azure Blueprints",
+        "Azure DevOps",
+        "Azure Policy",
+      ],
+      Answer: "2",
+    },
+    {
+      question:
+        "How many management groups can be supported in a single directory?",
+      options: ["10", "100", "1000", "10000"],
+      Answer: "4",
+    },
+    {
+      question:
+        "For each of the following statements, Select Yes if the statement is true. Otherwise, Select No? Statements: 1. Data transfers between Azure services located in different azure regions is always free. 2.North America is represented by a single Azure region 3.Every Azure region has multiple datacenters.",
+      options: ["Yes", "No"],
+      Answer: "1. No, 2.No, 3.Yes",
+    },
+    {
+      question:
+        " 'Azure Key Vault' is used to store app secrets. Instructions: Review the '' text. If it makes the statement correct, select No Change is needed. If the statement is incorrect, Select the answer choice that makes the statement correct.?",
+      options: [
+        "No change is needed",
+        "Azure Security Center",
+        "Azure Repos",
+        "Azure Blob Storage",
+      ],
+      Answer: "1",
+    },
+    {
+      question:
+        "For each of the following statements, Select Yes if the statement is true. Otherwise, Select No? Statements: 1. A DNS server that runs on an Azure Virtual Machine is an example of Platform as a service (PaaS) 2. Microsoft Intune is an example of Software as a Service (SaaS) 3. Azure Files is an example of Infrastructure as a Service (laaS)",
+      options: ["Yes", "No"],
+      Answer: "1. No, 2.Yes, 3.No",
     },
   ];
   return (
